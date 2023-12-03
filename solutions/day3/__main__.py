@@ -105,8 +105,8 @@ def part2():
                 adjacent_nums.add((num, frozenset(coords)))
 
         if len(adjacent_nums) == 2:
-            num1, coords1 = adjacent_nums.pop()
-            num2, coords2 = adjacent_nums.pop()
+            num1, _ = adjacent_nums.pop()
+            num2, _ = adjacent_nums.pop()
 
             gear_ratio = int(num1) * int(num2)
             gear_ratio_sum += gear_ratio
