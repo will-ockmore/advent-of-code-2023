@@ -39,7 +39,7 @@ def get_num_ways_to_win(t_t, d):
     lower = 0.5 * (t_t - (t_t**2 - 4 * d) ** 0.5)
     upper = 0.5 * (t_t + (t_t**2 - 4 * d) ** 0.5)
 
-    return len(list(range(math.ceil(lower), math.floor(upper) + 1)))
+    return math.floor(upper) - math.ceil(lower) + 1
 
 
 for t_t, d in input:
