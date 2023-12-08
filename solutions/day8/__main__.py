@@ -28,9 +28,7 @@ print(i)
 
 # Part 2
 nodes = [node for node in network if node[-1] == "A"]
-starts = [node for node in nodes if node[-1] == "A"]
 
-ends = {node for node in nodes if node[-1] == "Z"}
 visited = [defaultdict(dict) for _ in nodes]
 cycle_points = [0 for _ in nodes]
 
