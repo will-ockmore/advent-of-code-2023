@@ -16,14 +16,6 @@ def get_next(sequence):
 
 print(sum(get_next(sequence) for sequence in input))
 
+# Part 2
 
-def get_prev(sequence):
-    steps = [number - sequence[i] for i, number in enumerate(sequence[1:])]
-
-    if len(set(steps)) == 1:
-        return sequence[0] - steps[0]
-
-    return sequence[0] - get_prev(steps)
-
-
-print(sum(get_prev(sequence) for sequence in input))
+print(sum(get_next(sequence[::-1]) for sequence in input))
